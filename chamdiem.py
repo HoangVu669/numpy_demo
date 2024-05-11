@@ -3,14 +3,8 @@
 # pip install numpy
 
 import os
-import numpy as np
-from docx import Document
-
-import os
-from docx import Document
-
-import os
 import re
+import numpy as np
 from docx import Document
 
 def load_student_answers(folder_path):
