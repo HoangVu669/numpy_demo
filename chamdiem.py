@@ -38,10 +38,10 @@ def load_student_answers(folder_path):
                 # Lấy chỉ câu trả lời từ danh sách đã sắp xếp
                 answers = [answer[1] for answer in answers]
 
-                # if len(answers) >= 4:  # Kiểm tra xem tệp có chứa đủ thông tin sinh viên và câu trả lời không
-                #     student_answers[student_id] = answers
-                # else:
-                #     print(f"Bỏ qua tệp {file_name} vì không chứa đủ thông tin sinh viên hoặc câu trả lời.")
+                if len(answers) >= 4:  # Kiểm tra xem tệp có chứa đủ thông tin sinh viên và câu trả lời không
+                    student_answers[student_id] = answers
+                else:
+                    print(f"Bỏ qua tệp {file_name} vì không chứa đủ thông tin sinh viên hoặc câu trả lời.")
     except FileNotFoundError:
         print("Thư mục không được tìm thấy. Vui lòng kiểm tra đường dẫn thư mục.")
     except Exception as e:
